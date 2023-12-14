@@ -1,16 +1,16 @@
 # Define a list of products with names and prices
 all_products <- list(
-  list(name = "Apple", price = 0.5, quan=4),
-  list(name = "Banana", price = 0.3,  quan=3),
-  list(name = "Milk", price = 2,  quan=2),
-  list(name = "Bread", price = 1.5)
+  list(name = "Apple", price = 0.5),
+  list(name = "Banana", price = 0.3),
+  list(name = "Milk", price = 2),
+  list(name = "Bread", price= 1)
 )
 
 # Display the price list
 cat("Name \t Price\n")
 cat("==============\n")
 for (i in all_products)
-  cat(sprintf("%s \t%.2f \t %d\n", i$name, i$price, i$quan))
+  cat(sprintf("%s \t%.2f\n", i$name, i$price))
 
 # Initialize the shopping cart as an empty list
 shopping_cart <- list()
@@ -25,21 +25,20 @@ cart_items_to_add <- list(
 
 # Add items to the shopping cart if they are available in the store
 for (item in cart_items_to_add) 
+{
+  product_name <- item$name
+  qnty <- item$quantity
+  
+  product <- NULL
+  # Find if the product is available in the store/products list
+  for (p in all_products) 
   {
-    product_name <- item$name
-    qnty <- item$quantity
-    
-    # Find if the product is available in the store/products list
-    product <- NULL
-    
-    for (p in all_products) 
-      {
-      if (p$name == product_name) 
-        {
-        product <- p
-        break
-        }
-      }
+    if (p$name == product_name) 
+    {
+      product <- p
+      break
+    }
+  }
   
   # If the product is available in the store, add it to the shopping cart
   if (!is.null(product)) {

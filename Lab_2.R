@@ -13,7 +13,6 @@ course_marks <- matrix(c(
   78,45,67,89,90,
   89,80,67,78,90,
   80,75,70,80,90
-  
 ), nrow = num_students, byrow = TRUE)
 
 print(course_marks)
@@ -40,7 +39,7 @@ for (student_index in 1:num_students)
   
   #Store student information as a record 
   student_record <- list(name = student_name, marks = course_marks[student_index,], total = total_marks, average = average_marks, grade = grade)
-
+  
   #Append all students records together 
   student_records <- append(student_records, list(student_record))
 }
