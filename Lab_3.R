@@ -21,7 +21,7 @@ fine_amount <- calculate_fine(days_overdue)
 if (fine_amount == 0) {
   cat("No fine. Thank you for returning the book on time!!!\n")
 } else {
-  if (days_overdue >= 50) {
+  if (days_overdue > 50) {
     cat("Fine exceeds the maximum. Please contact the library.\n")
   } else {
     cat("Please pay the fine within the specified period.\n")
