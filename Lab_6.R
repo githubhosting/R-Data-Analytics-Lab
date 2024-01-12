@@ -10,7 +10,7 @@ sales_data <- data.frame(
 print(sales_data)
 print(sales_data$Month)
 print(sales_data$Sales)
-
+  
 # Convert to time series data/object for use with R functions for time series data analysis (Function: ts())
 # Frequency 12 makes it a monthly time series (Jan-Dec due to 12 values of sales).
 sales_ts <- ts(sales_data$Sales, frequency = 12)
