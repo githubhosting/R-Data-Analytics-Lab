@@ -3,7 +3,7 @@ library(forecast)
 
 # Create a data frame with Month and sales columns for 12 months
 sales_data <- data.frame(
-  Month = seq(as.Date("2023-01-01"), as.Date("2023-12-01"), by = "months"),
+  Month = seq(as.Date("2024-01-01"), as.Date("2024-12-01"), by = "months"),
   Sales = c(12000, 15000, 18000, 16000, 20000, 22000, 25000, 28000, 30000, 32000, 35000, 38000)
 )
 
@@ -21,7 +21,7 @@ print(sales_ts)
 arima_model <- auto.arima(sales_ts)
 
 # Forecast sales for the next 4 months
-forecast_result <- forecast(arima_model, h = 4)
+forecast_result <- forecast(arima_model, h = 3)
 
 # Display forecast results
 print(forecast_result)

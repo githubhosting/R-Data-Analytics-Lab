@@ -1,14 +1,13 @@
 library(dplyr)
-# install.packages("ggplot2")
 library(ggplot2)
 
-# Create a sample dataframe
+# Create a sample data frame
 purchase_data <- data.frame(
   CustomerID = 1:10,
   PurchaseAmount = c(150, 200, 100, 300, 250, 180, 220, 350, 280, 320)
 )
 
-# Display the sample dataframe
+# Display the sample data frame
 cat("Task 1: Loaded Dataframe\n")
 print(purchase_data)
 
@@ -44,7 +43,7 @@ print(std_dev_purchase)
 purchase_data <- purchase_data %>%
   mutate(Segment = ifelse(PurchaseAmount < median_purchase, "Low Spender", "High Spender"))
 
-# Display the updated dataframe
+# Display the updated data frame
 cat("\nTask 4: Customer Segmentation\n")
 print(purchase_data)
 

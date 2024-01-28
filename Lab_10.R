@@ -1,5 +1,6 @@
 library(dplyr)
 
+#Own Data set
 df <- data.frame(
   EMPID= c(101,102,103,104,105),
   Name=c("John","peter","bob","Linda","Elizabeth"),
@@ -7,7 +8,9 @@ df <- data.frame(
   Salary=c(50000,60000,45000,70000,55000),
   Department=c("HR","IT","Finance","Production","QualityControl"))
 
-filtered_data <- filter(df,Age>25)
+filtered_data <- filter(df,Age>30)
+
+print(filtered_data)
 
 selected_columns <- select(df, EMPID, Name, Salary)
 mutated_data <-mutate(df,Salary_Adjusted=Salary*1.1)
@@ -35,4 +38,3 @@ print("Arranged Data:")
 print(arranged_data)
 print("Joined Data:")
 print(joined_data)
-

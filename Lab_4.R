@@ -32,8 +32,8 @@ display_inventory <- function() {
 remove_item <- function(item) {
   if (item %in% inventory_items) {
     item_index <- which(inventory_items == item)
-    inventory_items <<- inventory_items[inventory_items != item]
-    inventory_qty <<- inventory_qty[-c(item_index)]
+    inventory_items <<- inventory_items[-item_index]
+    inventory_qty <<- inventory_qty[-item_index]
     cat("Item removed from inventory.\n")
   } else {
     cat("Item not found in inventory.\n")

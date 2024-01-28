@@ -32,7 +32,7 @@ add_student <- function(usn, name, math_score, science_score, history_score, att
 calculate_average_scores <- function() {
   avg_scores <- student_data %>%
     mutate(Average_Score = (Math_Score + Science_Score + History_Score) / 3) %>%
-    select(USN, Name, Average_Score, Attendance)
+    select(USN, Name, Average_Score)
   return(avg_scores)
 }
 

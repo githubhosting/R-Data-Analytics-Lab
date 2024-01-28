@@ -40,3 +40,4 @@ fines <- calculate_fine_matrix(overdue_matrix)
 for (i in 1:nrow(fines)) {
   cat("Student", i, "Total Fine:", sum(fines[i, ]), "\n")
 }
+

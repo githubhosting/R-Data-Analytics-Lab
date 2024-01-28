@@ -2,10 +2,10 @@ library(dplyr)
 library(ggplot2)
 
 # Task 1: Data Overview and Structure
-# Read the dataset IPL.csv into a data frame named ipl_data
+# Read the data set IPL.csv into a data frame named ipl_data
 ipl_data <- read_csv("/home/ritadmin/Documents/RLab/data.csv")
 
-# Display the structure of the dataset
+# Display the structure of the data set
 cat("Task 1.1: Data Overview (Structure)\n")
 str(ipl_data)
 

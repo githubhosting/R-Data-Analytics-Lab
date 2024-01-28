@@ -23,5 +23,6 @@ cat("3rd Quartile of Purchase Amounts:", q3_purchase, "\n")
 
 # Create a histogram with different number of bins and colors
 ggplot(purchase_data, aes(x = PurchaseAmount)) +
-  geom_histogram(binwidth = 30, fill = "green", color = "black") +
+  geom_histogram(binwidth = 30, fill = "white", color = "red") +
   labs(title = "Distribution of Purchase Amounts", x = "Purchase Amount", y = "Frequency")
+
